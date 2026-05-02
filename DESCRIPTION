@@ -1,5 +1,5 @@
 Package: baplotr
-Title: Bland-Altman(BA) Plotr
+Title: Bland-Altman Plotter
 Description: Easily plot Bland-Altman plots
 Version: 1.0.0
 Authors@R: person("Ryan", "Tan", email = "twjryan.acad@gmail.com", role = c("aut", "cre", "cph"))
