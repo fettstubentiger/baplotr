@@ -1,6 +1,6 @@
 library(ggplot2)
 
-plot_ba <- function(data, methodA, methodB, labstitle, labsx, labsy) {
+plot_ba <- function(data, methodA, methodB, title, xlabel, ylabel) {
   
   averages <- rowMeans(cbind(methodA, methodB))
   differences <- methodA - methodB
@@ -14,8 +14,8 @@ plot_ba <- function(data, methodA, methodB, labstitle, labsx, labsy) {
     geom_hline(aes(yintercept = loa(methodA, methodB)[2], linetype = "Lower LoA"), colour = "red") +
     scale_linetype_manual(name = "Legend", values = c("Mean Bias Error" = "dotdash", "Upper LoA" = "dashed", "Lower LoA" = "dashed")) +
     labs(
-      title = labstitle,
-      x = labsx, 
-      y = labsy
+      title = title,
+      x = xlabel, 
+      y = ylabel
     )
 }

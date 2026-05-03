@@ -6,7 +6,7 @@ B <- sample(1:100, 10)
 C <- data.frame(A = A, B = B)
 
 test_that("'plot_ba' returns a gg object", {
-  p <- plot_ba(C, A, B, labstitle = "Title", labsx = "X", labsy = "Y")
+  p <- plot_ba(C, A, B, title = "Title", xlabel = "X", ylabel = "Y")
   expect_true(is_ggplot(p))
 })
 
