@@ -1,12 +1,12 @@
 library(ggplot2)
 
-plot_ba <- function(data, methodA, methodB, title, xlabel, ylabel) {
+plot_ba <- function(df, methodA, methodB, title, xlabel, ylabel) {
   
   averages <- rowMeans(cbind(methodA, methodB))
   differences <- methodA - methodB
    
   ggplot(
-    data, aes(x = averages, y = differences)) + 
+    df, aes(x = averages, y = differences)) + 
     geom_point(size = 0.4) +
     geom_hline(yintercept = 0) +
     geom_hline(aes(yintercept = mean_bias(methodA, methodB), linetype = "Mean Bias Error")) +
