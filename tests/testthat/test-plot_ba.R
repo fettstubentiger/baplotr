@@ -5,7 +5,7 @@ df <- data.frame(A, B)
 
 test_that("'plot_ba' returns a gg object", {
   p <- plot_ba(df, "A", "B", title = "Title", xlabel = "X", ylabel = "Y")
-  expect_true(is_ggplot(p))
+  expect_true(ggplot2::is_ggplot(p))
 })
 
 remove(A, B, df)
