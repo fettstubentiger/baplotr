@@ -1,13 +1,11 @@
-library(ggplot2)
-
-set.seed(123)
+set.seed(1)
 A <- sample(1:100, 10)
 B <- sample(1:100, 10)
-C <- data.frame(A = A, B = B)
+df <- data.frame(A, B)
 
 test_that("'plot_ba' returns a gg object", {
-  p <- plot_ba(C, A, B, title = "Title", xlabel = "X", ylabel = "Y")
+  p <- plot_ba(df, "A", "B", title = "Title", xlabel = "X", ylabel = "Y")
   expect_true(is_ggplot(p))
 })
 
-remove(A, B, C)
+remove(A, B, df)

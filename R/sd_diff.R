@@ -1,3 +1,3 @@
-sd_diff <- function(methodA, methodB) {
-  sd(methodA - methodB)
+sd_diff <- function(df, methodA, methodB) {
+  sd(df[[methodA]] - df[[methodB]])
 }

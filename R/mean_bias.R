@@ -1,3 +1,3 @@
-mean_bias <- function(methodA, methodB) {
-  mean(methodA - methodB)
+mean_bias <- function(df, methodA, methodB) {
+  mean(df[[methodA]] - df[[methodB]])
 }
